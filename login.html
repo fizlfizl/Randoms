@@ -1,0 +1,88 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gophish - Open-Source Phishing Toolkit">
+    <meta name="author" content="Jordan Wright (http://github.com/jordan-wright)">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <title>Gophish - {{ .Title }}</title>
+
+    <link href="/css/dist/gophish.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css'>
+</head>
+<!--
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/"> <img class="navbar-logo" src="/images/JoushenLogo.png"  /> </a>
+                <a class="navbar-brand" href="/">&nbsp;| PhishUs</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="login-button" href="/login">
+                            <button type="button" class="btn btn-primary">Login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <form class="form-signin" action="" method="POST">
+       <h5 class="form-signin-heading">Please sign in</h5>
+            <img id="logo" src="/images/loginlogo.png" />
+             
+            {{template "flashes" .Flashes}}
+            <input type="text" name="username" class="form-control top-input" placeholder="Username" required autofocus>
+            <input type="password" name="password" class="form-control bottom-input" placeholder="Password" autocomplete="off" required>
+            <input type="hidden" name="csrf_token" value="{{.Token}}" />
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+     Placed at the end of the document so the pages load faster 
+    <script src="/js/dist/vendor.min.js"></script>
+</body>
+-->
+
+<body id="particles-js"></body>
+<div class="animated bounceInDown">
+  <div class="container">
+    <span class="error animated tada" id="msg"></span>
+    <form name="form1" class="box" onsubmit="return checkStuff()">
+      <h4>Admin<span>Dashboard</span></h4>
+      <h5>Sign in to your account.</h5>
+        <input type="text" name="email" placeholder="Email" autocomplete="off">
+        <i class="typcn typcn-eye" id="eye"></i>
+        <input type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off">
+        <label>
+          <input type="checkbox">
+          <span></span>
+          <small class="rmb">Remember me</small>
+        </label>
+        <a href="#" class="forgetpass">Forget Password?</a>
+        <input type="submit" value="Sign in" class="btn1">
+      </form>
+        <a href="#" class="dnthave">Don’t have an account? Sign up</a>
+  </div> 
+       <div class="footer">
+      <span>Made with <i class="fa fa-heart pulse"></i> <a href="https://www.google.de/maps/place/Augsburger+Puppenkiste/@48.360357,10.903245,17z/data=!3m1!4b1!4m2!3m1!1s0x479e98006610a511:0x73ac6b9f80c4048f"><a href="https://codepen.io/lordgamer2354">By Anees Khan</a></span>
+    </div>
+</div>
+
+
+
+</html>
+{{ end }}
